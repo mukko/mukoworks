@@ -1,0 +1,45 @@
+---
+import "../../../styles/global.css";
+
+import Footer from "../../../components/Footer.astro"
+
+import Logo from "../../../assets/eight/package.png";
+
+const title = "EIGHT エイト";
+---
+
+<section class="hero mx-auto p-12">
+    <div class="grid grid-cols-1 md:grid-cols-3">
+        <div class="md:col-span-1 flex justify-center items-center p-12">
+            <img
+                class="max-h-80 object-contain"
+                src={Logo.src}
+                alt="eight package image"
+            />
+        </div>
+        <div class="md:col-span-2 p-12">
+            <h1 class="text-6xl font-black mb-4">{title}</h1>
+            <p class="text-3xl font-bold">え、8はどこ？</p>
+            <div class="max-h-80">
+                <p class="pt-8 text-xl">
+                    いち早く手札を減らすゲーム。 1~8を出す必要があるのにカードは
+                    1~7まで！？ 8は7セグ数字2種類を組み合わせると表現できます！
+                </p>
+                <p class="pt-8 text-xl">
+                    被害を抑えるために降りるのか？ 引いて勝負にでるのか？
+                    8の組み合わせをどれだけ 出せるか？
+                    短時間ながら程よい難易度のカードゲームです。
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<Footer />
+
+<style>
+    section.hero {
+        background-color: #514d4c;
+        color: #ffffff;
+    }
+</style>

@@ -1,0 +1,25 @@
+---
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "私について"
+
+const count = () => {
+    return new Date().getTime();
+}
+---
+
+<a href="/">ホーム</a>
+<a href="/about/">私について</a>
+
+<h1>{pageTitle}</h1>
+<p>{count}</p>
+
+<Footer />
+
+
+<style>
+    h1 {
+        color: purple;
+        font-size: 4rem;
+    }
+</style>
