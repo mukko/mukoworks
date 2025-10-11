@@ -12,6 +12,6 @@ export default defineConfig({
   },
 
   integrations: [icon()],
-  site: 'https://mukko.github.com/mukoworks',
-  base: '/'
+  site: 'https://mukko.github.com',
+  base: '/mukoworks'
 });
