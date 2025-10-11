@@ -11,5 +11,7 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [icon()]
+  integrations: [icon()],
+  site: 'https://github.com/mukko/mukoworks.github.io',
+  base: '/'
 });
