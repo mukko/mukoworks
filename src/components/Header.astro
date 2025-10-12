@@ -1,7 +1,29 @@
 ---
-
+const siteName = 'mukoworks';
+const home = '/'+siteName;
+const links = [
+    { href: '/product', label: 'つくったもの' },
+];
+const currentPath = Astro.url.pathname;
 ---
 
 <header>
-    
+    <div class="w-full bg-white px-12">
+        <nav class="flex items-center justify-between max-w-screen-lg mx-auto py-4">
+            <a href={home} class="text-2xl font-bold">{siteName}</a>
+            <div class="flex gap-6">
+                { links.map(link => (
+                    <div class="flex flex-col items-center">
+                    <a href={link.href} class="text-base hover:underline">
+                        {link.label}
+                    </a>
+                    {/* { currentPath.startsWith('/mukoworks/product') && link.href === '/product' ? (
+                            <span class="block mt-1 w-1.5 h-1.5 rounded-full bg-gray-800" />
+                        ) : null} */}
+                    </div>
+                ))}
+            </div>
+        </nav>
+    </div>
+    <div class="border-b-2 border-b-gray-200" />
 </header>

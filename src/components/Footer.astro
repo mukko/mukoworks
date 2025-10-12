@@ -6,26 +6,29 @@ const circle_name = 'むこちゃん開発局';
 import XLogo from '../assets/x-icon.png';
 ---
 
-<footer>
-    <div class="grid grid-cols-1 md:grid-cols-3 p-6">
-        <div class="md:col-span-1 p-6">
-            <p class="text-xl">{circle_name}</p>
-            <p class="pt-3"><a href="/">トップ</a></p>
+<footer class="w-full">
+    <div class="max-w-screen-lg mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 py-6">
+            <div class="md:col-span-1">
+                <p class="text-xl">{circle_name}</p>
+                <p class="pt-3"><a href="/mukoworks">トップ</a></p>
+            </div>
+            <div class="md:col-span-1">
+                <p class="text-xl">外部リンク</p>
+                <p class="pt-3 flex items-center gap-2">
+                    <img
+                        class="w-4 h-4 object-contain"
+                        src={XLogo.src}
+                        alt="x logo image"
+                    />
+                    <a href={'https://x.com/' + x_user} target="_blank">X</a>
+                </p>
+            </div>
         </div>
-        <div class="md:col-span-1 p-6">
-            <p class="text-xl">外部リンク</p>
-            <p class="pt-3 flex items-center gap-2">
-                <img
-                    class="w-4 h-4 object-contain"
-                    src={XLogo.src}
-                    alt="x logo image"
-                />
-                <a href={'https://x.com/' + x_user} target="_blank">X</a>
-            </p>
+        <div class="border-b-2 border-b-gray-200" />
+        <div class="text-center text-xs text-gray-500 py-2">
+            © むこちゃん開発局
         </div>
-    </div>
-    <div class="text-center text-xs text-gray-500 py-2">
-        © むこちゃん開発局
     </div>
 </footer>
 
