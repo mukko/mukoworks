@@ -8,5 +8,5 @@
   },
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["docs"]
+  "exclude": ["dist"]
 }
