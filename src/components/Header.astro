@@ -2,7 +2,7 @@
 const siteName = 'mukoworks';
 const home = '/'+siteName;
 const links = [
-    { href: home + '/product', label: 'つくったもの' },
+    { href: home + '/products', label: 'つくったもの' },
 ];
 const currentPath = Astro.url.pathname;
 ---
@@ -17,7 +17,7 @@ const currentPath = Astro.url.pathname;
                     <a href={link.href} class="text-base hover:underline">
                         {link.label}
                     </a>
-                    { currentPath.startsWith('/mukoworks/product') && link.href === '/mukoworks/product' ? (
+                    { currentPath.startsWith('/mukoworks/products') && link.href === '/mukoworks/products' ? (
                             <span class="block mt-1 w-1.5 h-1.5 rounded-full bg-gray-400" />
                         ) : null}
                     </div>
