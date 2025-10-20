@@ -1,12 +1,36 @@
 ---
+import { Picture } from 'astro:assets';
+
+import "@styles/global.css";
+
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Icon from "@assets/top/icon.png";
+
 ---
 
 <Layout>
-	<div class="max-w-screen-lg mx-auto p-12">
-		<p>content</p>
+	<div class="max-w-screen-lg mx-auto p-12 flex flex-col items-center justify-center text-center">
+		<div>
+			<Picture
+				class="max-w-[300px] h-auto"
+                src={Icon}
+                formats={['avif', 'webp']}
+                alt="icon"></Picture>
+		</div>
+		<div class="flex flex-col gap-4 mt-8 w-full max-w-xs">
+            <a
+                href="/mukoworks/products"
+                class="w-full py-3 px-6 rounded bg-blue-400 text-white font-bold text-lg hover:bg-blue-500 transition"
+            >
+                つくったもの
+            </a>
+            <a
+                href="https://forms.gle/P3tqwnWBpQ3ojSJq8"
+                class="w-full py-3 px-6 rounded bg-gray-400 text-white font-bold text-lg hover:bg-gray-500 transition"
+            >
+                お問い合わせ(Googleフォームへ)
+            </a>
+        </div>
 	</div>
 </Layout>
