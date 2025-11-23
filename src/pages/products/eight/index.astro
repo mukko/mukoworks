@@ -11,6 +11,10 @@ import Num1 from "@assets/eight/num1.png";
 import Num3 from "@assets/eight/num3.png";
 import Num3r from "@assets/eight/num3r.png";
 import Num8 from "@assets/eight/num8.png";
+import ErattaB1 from "@assets/eight/eratta1-1.png";
+import ErattaA1 from "@assets/eight/eratta1-2.png";
+import ErattaB6 from "@assets/eight/eratta6-1.png";
+import ErattaA6 from "@assets/eight/eratta6-2.png";
 import { YouTube } from '@astro-community/astro-embed-youtube';
 
 const title = "EIGHT エイト";
@@ -59,6 +63,53 @@ const min_age = "8";
             <div class="flex items-center justify-center text-center">プレイ時間{minutes}分</div>
             <div class="flex items-center justify-center text-center">対象年齢{min_age}以上</div>
         </div>
+    </div>
+</section>
+
+<section class="w-full mx-auto py-6">
+    <div class="max-w-screen-lg mx-auto px-12">
+        <details class="border border-gray-200 rounded-lg p-4">
+            <summary class="font-bold text-lg cursor-pointer hover:text-blue-600 bg-red-500 text-white p-2 rounded">
+                エラッタ
+            </summary>
+            <div class="mt-4 text-gray-700">
+                <h3 class="font-semibold mb-2">エラッタ</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>8になるカードの組み合わせとして1と6がありましたが、入稿データのミスで抜けていました</li>
+                    <ul>
+                        <li>カード1の修正内容</li>
+                            <ul>
+                                <li>修正前</li>
+                                    <Picture
+                                        class="max-w-[200px] h-auto"
+                                        src={ErattaB1}
+                                        alt="eratta1"
+                                    />
+                                <li>修正後</li>
+                                    <Picture
+                                        class="max-w-[200px] h-auto"
+                                        src={ErattaA1}
+                                        alt="eratta1"
+                                    />
+                            </ul>
+                        <li>カード6の修正内容</li>
+                            <ul>
+                                <li>修正前</li>
+                                    <Picture
+                                        class="max-w-[200px] h-auto"
+                                        src={ErattaB6}
+                                        alt="eratta1"
+                                    />
+                                <li>修正後</li>
+                                    <Picture
+                                        class="max-w-[200px] h-auto"
+                                        src={ErattaA6}
+                                        alt="eratta1"
+                                    />
+                            </ul>
+                </ul>
+            </div>
+        </details>
     </div>
 </section>
 
@@ -182,7 +233,7 @@ const min_age = "8";
                 </div>
                 <div class="md:w-2/3 flex p-2 md:p-12">
                     <ul>
-                        <li>印刷：萬印堂</li>
+                        <li><a href="https://est.mnd.co.jp/estimate/simulation">印刷：萬印堂</a></li>
                         <li><a href="https://booth.pm/ja/items/2747965">パッケージフォント：ベストテンFONT</a></li>
                     </ul>
                     <p class="text-xl"></p>
