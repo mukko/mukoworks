@@ -41,6 +41,39 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## � OGP画像
+
+各ページのSNSシェア時に表示されるOGP画像は `public/ogp/` に配置します。
+
+### 配置場所
+
+```
+public/ogp/
+├── bitflip.png
+├── eight.png
+└── (新しいプロダクト名).png
+```
+
+### 推奨仕様
+
+| 項目 | 値 |
+| :--- | :--- |
+| サイズ | 1200 x 630 px |
+| フォーマット | PNG または JPEG |
+| ファイルサイズ | 300KB以下を推奨 |
+
+### 新しいページへの適用方法
+
+各ページの `<Layout>` コンポーネントに `ogImage` propsを渡します。パスは `base`（`/mukoworks`）を含めた絶対パスで指定してください。
+
+```astro
+<Layout
+  title="ページタイトル | mukoworks"
+  description="ページの説明文"
+  ogImage="/mukoworks/ogp/xxx.png"
+>
+```
+
+## �👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

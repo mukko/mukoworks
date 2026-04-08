@@ -1,6 +1,21 @@
 ---
 import Header from "@components/Header.astro"
 import Footer from "@components/Footer.astro"
+
+interface Props {
+	title?: string;
+	description?: string;
+	ogImage?: string;
+}
+
+const {
+	title = "mukoworks",
+	description = "",
+	ogImage = "",
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = ogImage ? new URL(ogImage, Astro.site).href : "";
 ---
 
 <!doctype html>
@@ -10,7 +25,14 @@ import Footer from "@components/Footer.astro"
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>mukoworks</title>
+		<title>{title}</title>
+		<meta property="og:title" content={title} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		{ogImage && <meta property="og:image" content={ogImageURL} />}
+		{description && <meta property="og:description" content={description} />}
+		{description && <meta name="description" content={description} />}
+		<meta name="twitter:card" content="summary_large_image" />
 	</head>
 	<body class="flex flex-col min-h-screen">
 		<Header />
