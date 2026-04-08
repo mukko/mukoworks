@@ -4,6 +4,7 @@ import { Picture } from "astro:assets";
 import "@styles/global.css";
 
 import Layout from "../../../layouts/Layout.astro";
+import ShareButtons from "@components/ShareButtons.astro";
 
 import Logo from "@assets/bitflip/package.png";
 
@@ -61,6 +62,8 @@ const min_age = "12";
             </div>
         </div>
     </section>
+
+    <ShareButtons url="https://mukko.github.io/mukoworks/products/bitflip" title="BITFLIP - 勝負に勝ってビットを集めろ" />
 
     <div class="border-b-2 border-b-gray-200 max-w-screen-lg mx-auto"></div>
 

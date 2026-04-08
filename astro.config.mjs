@@ -13,6 +13,6 @@ export default defineConfig({
   },
 
   integrations: [icon()],
-  site: 'https://mukko.github.com',
+  site: 'https://mukko.github.io',
   base: '/mukoworks'
 });
