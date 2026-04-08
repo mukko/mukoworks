@@ -41,7 +41,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## � OGP画像
+## OGP画像
 
 各ページのSNSシェア時に表示されるOGP画像は `public/ogp/` に配置します。
 
@@ -74,6 +74,6 @@ public/ogp/
 >
 ```
 
-## �👀 Want to learn more?
+## Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
