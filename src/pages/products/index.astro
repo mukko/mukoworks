@@ -5,6 +5,7 @@ const title = 'つくったもの';
 const base = '/mukoworks/products'
 
 import EightPackage from '@assets/eight/package.png';
+import BitflipPackage from '@assets/bitflip/package.png';
 
 const products = [
   {
@@ -13,11 +14,16 @@ const products = [
     href: base + '/eight',
     image: EightPackage.src, // 画像パスは適宜修正
   },
-  // 他のプロダクトも同様に追加
+  {
+    title: 'BITFLIP ビットフリップ',
+    description: '数字の強さを比べて勝者がビットを集めるゲーム',
+    href: base + '/bitflip',
+    image: BitflipPackage.src, // 画像パスは適宜修正
+  },
 ];
 ---
 
-<Layout>
+<Layout title="つくったもの | mukoworks" description="mukoworksの制作物一覧">
 
 <div class="w-full py-6 max-w-screen-lg mx-auto">
     <h1 class="text-3xl font-bold mb-8">{title}</h1>
